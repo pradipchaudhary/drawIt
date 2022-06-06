@@ -6,6 +6,8 @@ $(document).ready(function () {
     items: 1,
     dots: false,
     // navText: ["PREV", "NEXT"],
+    animateIn: "fadeIn",
+    animateOut: "fadeOut",
     smartSpeed: 1000,
     autoplay: true,
     autoplayTimeout: 7000,
@@ -15,6 +17,22 @@ $(document).ready(function () {
       },
       768: {
         nav: true,
+      },
+    },
+  });
+  $(".our-team").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
       },
     },
   });
@@ -67,27 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // DOMContentLoaded  end
 
-// Special Countdown
-let daysItem = document.querySelector("#days");
-let hoursItem = document.querySelector("#hours");
-let minItem = document.querySelector("#min");
-let secItem = document.querySelector("#sec");
-
-let countDown = () => {
-  let futureDate = new Date("30 July 2021");
-  let currentDate = new Date();
-  let myDate = futureDate - currentDate;
-
-  let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
-  let hours = Math.floor(myDate / 1000 / 60 / 60) % 24;
-  let min = Math.floor(myDate / 1000 / 60) % 60;
-  let sec = Math.floor(myDate / 1000) % 60;
-
-  daysItem.innerHTML = days;
-  hoursItem.innerHTML = hours;
-  minItem.innerHTML = min;
-  secItem.innerHTML = sec;
-};
 
 countDown();
 
