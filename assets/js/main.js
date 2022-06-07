@@ -9,7 +9,7 @@ $(document).ready(function () {
     animateIn: "fadeIn",
     animateOut: "fadeOut",
     smartSpeed: 1000,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 7000,
     responsive: {
       0: {
@@ -37,7 +37,7 @@ $(document).ready(function () {
     },
   });
 
-  $("#projects-slider").owlCarousel({
+  $(".projects-slider").owlCarousel({
     loop: true,
     nav: false,
     items: 2,
@@ -51,8 +51,8 @@ $(document).ready(function () {
         items: 1,
       },
       768: {
-        items: 2,
-        margin: 8,
+        items: 3,
+        margin: 10,
       },
     },
   });
@@ -64,8 +64,17 @@ $(document).ready(function () {
     smartSpeed: 900,
     items: 1,
     margin: 24,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 4000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+        margin: 40,
+      },
+    },
   });
 });
 
@@ -84,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // DOMContentLoaded  end
-
 
 countDown();
 
