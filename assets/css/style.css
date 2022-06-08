@@ -339,7 +339,7 @@ p {
   position: relative;
   top: -75px;
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   background-color: transparent;
   z-index: 999;
 }
@@ -441,8 +441,8 @@ p {
 /* === About Us === */
 #about-us {
   position: relative;
-  top: 75px;
-  padding: 6rem;
+  /* top: 75px; */
+  padding: 4.6rem;
   margin-bottom: 6rem;
 }
 #about-us .about-detail {
@@ -489,7 +489,7 @@ p {
 
 /* === Facilities === */
 #facilities {
-  padding: 6rem;
+  padding: 4.6rem;
   background-color: var(--white-color);
 }
 #facilities .header-sec {
@@ -594,9 +594,12 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 0;
+  padding: 4.6rem 0;
 }
-
+#milestone h1 {
+  font-family: var(--title-fonts);
+  font-weight: 500;
+}
 #milestone h1,
 #milestone p {
   color: #fff;
@@ -604,7 +607,7 @@ p {
 
 /* === Our Team === */
 #our-team {
-  padding: 6rem;
+  padding: 4.6rem;
 }
 /* Header Section  */
 #our-team .header-sec {
@@ -650,7 +653,7 @@ p {
 #our-team .item .inner-item .social_media {
   position: absolute;
   top: -155px;
-  right: 15px;
+  right: 25px;
   background-color: var(--primary-color);
   transition: all 0.35s ease-in-out;
 }
@@ -738,7 +741,7 @@ p {
 
 /* === Our Services === */
 #our-services {
-  padding: 4rem;
+  padding: 4.6rem;
   background: #fff;
 }
 #our-services .header-sec {
@@ -806,7 +809,7 @@ p {
 }
 
 #our-services .our_services .our_service_item img {
-  width: 90px;
+  width: 100px;
   margin-bottom: 30px;
   transition: transform 0.8s;
 }
@@ -826,10 +829,11 @@ p {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.86rem;
-  color: #3c3e96;
+  color: var(--primary-color);
+  transition: transform 0.8s;
 }
 #our-services .our_services .our_service_item a:hover {
-  color: var(--secondary-color);
+  color: var(--dark-color);
 }
 #our-services .view-all {
   text-align: center;
@@ -837,14 +841,18 @@ p {
 }
 #our-services .view-all a {
   text-transform: uppercase;
-  color: #3c3e96;
+  color: var(--primary-color);
   font-size: 0.86rem;
   font-weight: 600;
+  transition: transform 0.8s;
 }
-
+#our-services .view-all a:hover {
+  color: var(--dark-color);
+}
 /* === Portfolio === */
 #portfolio {
-  padding: 4rem 0px;
+  padding: 4.6rem 0px 0px;
+  background-color: var(--primary-color);
 }
 #portfolio .header-sec {
   text-align: center;
@@ -859,7 +867,7 @@ p {
   line-height: 22px;
   position: relative;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--dark-color);
   background: #d3e9fb;
   padding: 4px 8px;
   margin: 0 0 10px;
@@ -869,7 +877,7 @@ p {
   font-size: 42px;
   line-height: 56px;
   z-index: 9;
-  color: var(--dark-color);
+  color: var(--grey-color);
   padding: 0;
   margin: 0 0;
   position: relative;
@@ -890,6 +898,8 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 2;
+  /* border-left: 10px solid #fff;
+  border-right: 10px solid #fff; */
 }
 
 .project h6 {
@@ -932,7 +942,8 @@ p {
 
 /* === Testimonial ===*/
 #testimonial {
-  padding: 4rem 0px;
+  padding: 4.6rem 0px;
+  background-color: var(--white-color);
 }
 #testimonial .header-sec {
   text-align: center;
@@ -967,8 +978,9 @@ p {
 }
 
 #testimonial .reviews_item {
-  background-color: #fff;
-  padding: 45px 35px;
+  background-color: #f4f6f9;
+  padding: 45px;
+  border-radius: 3px;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
   position: relative;
 }
@@ -1022,12 +1034,30 @@ p {
 /* === Appointment  */
 #appointment {
   position: relative;
+  padding: 4.6rem 0;
   /* background: url(../images/bg-img.png); */
-  height: 400px;
 }
 #appointment .appointment-box {
   background-color: #fff;
   padding: 40px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+#appointment .appointment-box::after {
+  content: "";
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: block;
+}
+#appointment .appointment-box img {
+  position: absolute;
+  left: -10px;
+  bottom: -1px;
+  height: 550px;
 }
 #appointment .header-sec {
   margin-top: 10px;
@@ -1051,7 +1081,7 @@ p {
   font-size: 45px;
   line-height: 56px;
   z-index: 9;
-  color: var(--dark-color);
+  color: var(--white-color);
   padding: 0;
   margin: 0 0;
   position: relative;
@@ -1066,28 +1096,121 @@ p {
   margin: 10px 0;
 }
 #appointment .appointment-form .f1 input {
-  padding: 10px;
+  padding: 12px;
+  padding-left: 15px;
   margin: 10px;
-  min-width: 276px;
-  background-color: #f4f6f9;
-  border: 1px solid #f4f6f9;
-  border-radius: 3px;
-}
-#appointment .appointment-form .f1 input:focus {
-  border: 1px solid #eee;
-}
-#appointment .appointment-form textarea {
-  padding: 10px;
-  margin: 15px;
-  background-color: #f4f6f9;
-  border: 1px solid #f4f6f9;
-  border-radius: 3px;
   width: 100%;
-  min-height: 200px;
+  background: rgba(255, 255, 255, 0.14);
+  border: none;
+  border-radius: 3px;
+  color: var(--white-color);
 }
+#appointment .appointment-form .f1 input::placeholder {
+  color: var(--white-color);
+}
+#appointment .appointment-form .f1 input:focus,
+#appointment .appointment-form .f1 input:focus-visible {
+  box-shadow: none;
+  border-color: var(--brand);
+  outline: none;
+}
+
 #appointment .appointment-form button {
   margin-left: 15px;
+  margin-top: 20px;
+  background-color: var(--white-color);
+  color: #000;
+  text-transform: uppercase;
+  transition: transform 0.8s;
 }
+#appointment .appointment-form button:hover {
+  border: 1px solid var(--primary-color);
+  background-color: #777;
+  color: #fff;
+}
+/* === Footer === */
+footer {
+  padding: 4.6rem 0 0;
+  background-color: var(--primary-dark-color);
+  color: #a9a9a9;
+}
+footer .footer img.footer-logo {
+  max-width: 300px;
+}
+footer .footer .footer-social {
+  margin-top: 20px;
+}
+footer .footer .footer-social ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+footer .footer .footer-social ul li {
+  margin: 6px;
+}
+footer .footer .footer-social ul a {
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+}
+footer .footer .footer-social ul a:hover {
+  background-color: var(--primary-color);
+}
+footer .footer h2.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--title-fonts);
+  margin-bottom: 30px;
+  color: #eee;
+  text-transform: uppercase;
+}
+footer .footer ul {
+  padding: 0px;
+  list-style: none;
+}
+footer .footer ul li {
+  padding: 6px 0;
+}
+footer .contact-us ul li span {
+  margin-left: 10px;
+}
+
+footer .facebook-page {
+  max-height: 380px;
+  /* height: 330px; */
+  overflow: hidden;
+}
+/* === Copyright */
+footer .copyright {
+  padding: 15px;
+  text-align: center;
+  color: #eee;
+  border-top: 1px solid #2e5785;
+  margin-top: 30px;
+}
+footer .copyright p {
+  color: #a9a9a9;
+}
+
+/* === Button to Top === */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.8s ease-in;
+}
+
+.to-top--hidden {
+  opacity: 0;
+}
+/* === Responsive CSS === */
 @media (max-width: 1030px) {
   /* Home CSS */
   .home .home-banner-1,
@@ -1120,58 +1243,88 @@ p {
     margin-top: 0;
   }
 }
+
 /* ============ desktop view .end// ============ */
 @media (max-width: 991px) {
   #top_wrap {
     font-size: 0.8rem;
   }
-  /* Home CSS */
-  .home .home-banner .home-banner-text {
-    transform: translate(-66%, -50%);
-  }
   /* Slider  */
-  .home .home-banner .home-banner-text {
-    position: absolute;
-    width: 75%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .home .home-banner .home-banner-text h1 {
-    font-size: 1.6rem;
-  }
-  .home .home-banner .home-banner-text h2 {
-    font-size: 1.2rem;
+  .slide .inner-slide h5.title {
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
 }
 @media (max-width: 767px) {
   #top_wrap {
     display: none;
   }
-  /* Home CSS */
-  .home .home-banner-1,
-  .home .home-banner-2 {
-    background-position: 50% center;
-    min-height: 450px;
-  }
-  .home .home-banner .home-banner-text {
-    position: absolute;
-    width: 75%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .home .home-banner .home-banner-text h1 {
-    font-size: 1.6rem;
-  }
-  .home .home-banner .home-banner-text h2 {
-    font-size: 1.2rem;
-  }
-  .home .home-banner .home-banner-text .btn-danger {
-    padding: 0.5rem 1.5rem;
-  }
-  .home .slider-icon {
+  /* slide */
+  .slide .inner-slide h5.title {
     font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  #header a.navbar-brand img {
+    width: 280px;
+  }
+  #header .navbar-nav {
+    display: flex;
+    align-items: flex-start;
+  }
+  /* features */
+  #features .service_item {
+    width: 100%;
+    margin-left: 0px;
+  }
+  /* About Us */
+  #about-us {
+    padding: 0px;
+  }
+  #about-us .about-detail {
+    margin-top: 10px;
+  }
+  /* Facilities */
+  #facilities {
+    padding: 0px;
+  }
+  /* Our services */
+  #our-services .our_services .our_service_item {
+    border: none;
+  }
+  /* our team  */
+  #our-team {
+    padding: 0;
+  }
+  #our-team .inner-text {
+    width: 90%;
+  }
+  /* Portfolio */
+  #portfolio {
+    padding: 0px;
+  }
+  #testimonial {
+    padding: 0px;
+  }
+  #appointment {
+    padding: 15px 0;
+  }
+  #appointment .appointment-box {
+    padding: 0;
+    padding-right: 15px;
+    background-color: var(--primary-color);
+  }
+  #appointment .appointment-form {
+    padding: 0px;
+    margin: 0px;
+  }
+  #appointment .appointment-form .f1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === Header Section === */
+  .header-sec h5.title {
+    font-size: 1rem;
   }
 }
 
@@ -1179,15 +1332,33 @@ p {
   #top_wrap {
     display: none;
   }
-  /* Home CSS */
-  .home .home-banner .home-banner-text h2 {
-    font-size: 1rem;
+  /* slide */
+  .slide .inner-slide h5.title {
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
-  .home .home-banner .home-banner-text {
-    position: absolute;
-    width: 75%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* Navabar */
+  #header a.navbar-brand img {
+    width: 280px;
+  }
+  #header .navbar-nav {
+    display: flex;
+    align-items: flex-start;
+  }
+  /* features */
+  #features .service_item {
+    width: 100%;
+    margin-left: 0px;
+  }
+  /* About Us */
+  #about-us {
+    padding: 0px;
+  }
+  #about-us .about-detail {
+    margin-top: 10px;
+  }
+  /* Facilities */
+  #facilities {
+    padding: 0px;
   }
 }
