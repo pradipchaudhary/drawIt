@@ -46,7 +46,7 @@ $(document).ready(function () {
     smartSpeed: 600,
     center: true,
     autoplay: true,
-    autoplayTimeout: 4000,
+    autoplayTimeout: 6000,
     responsive: {
       0: {
         items: 1,
@@ -55,7 +55,7 @@ $(document).ready(function () {
         items: 1,
       },
       1000: {
-        items: 3,
+        items: 4,
       },
     },
   });
