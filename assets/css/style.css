@@ -41,14 +41,17 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75rem;
-  background: #f4f6f9;
+  /* background: #f4f6f9; */
+  background: #fff;
   color: var(--text-black);
   overflow-x: hidden;
   font-family: var(--body-fonts);
 }
 
 /* Custom CSS */
-
+img {
+  max-width: 100%;
+}
 a,
 a:hover {
   text-decoration: none;
@@ -66,10 +69,13 @@ p {
   letter-spacing: 0.2px;
   display: inline-block;
 }
-.btn-default:hover {
+.btn-default:hover,
+.btn-default:focus {
   color: var(--grey-color);
   background: var(--primary-dark-color);
   border-color: var(--primary-dark-color);
+  outline: none;
+  box-shadow: none;
 }
 
 /* === Top Wrap === */
@@ -338,13 +344,23 @@ p {
 /* ==== Services ==== */
 #features {
   position: relative;
+  width: 100%;
+  z-index: 1;
+  background: #f4f6f9;
+}
+#features::before {
+  content: "";
+  width: 100%;
+  background: #f4f6f9;
+  top: -10px;
+  position: absolute;
+  height: 20px;
+}
+#features .features {
+  position: relative;
   top: -75px;
   width: 100%;
-  /* height: 300px; */
-  background-color: transparent;
-  z-index: 999;
 }
-
 #features .service_item {
   background-color: var(--primary-color);
   color: var(--grey-color);
@@ -442,9 +458,9 @@ p {
 /* === About Us === */
 #about-us {
   position: relative;
-  /* top: 75px; */
   padding: 4.6rem;
   margin-bottom: 6rem;
+  background: #f4f6f9;
 }
 #about-us .about-detail {
   padding-left: 30px;
@@ -481,13 +497,20 @@ p {
 #about-us .about-detail ul {
   margin-top: 40px;
   color: #000;
+  list-style: none;
+  padding: 0;
 }
 #about-us .about-detail ul li {
   line-height: 45px;
   font-weight: 600;
   color: var(--secondary-color);
 }
-
+#about-us .about-detail ul li i {
+  color: var(--primary-color);
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+}
 /* === Facilities === */
 #facilities {
   padding: 4.6rem;
@@ -591,13 +614,24 @@ p {
 #about_two {
   position: relative;
   padding: 5.6rem 0;
+  z-index: 1;
+}
+#about_two::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #f4f6f9;
+  z-index: -1;
 }
 #about_two::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-color: var(--primary-dark-color);
   z-index: -1;
@@ -663,12 +697,13 @@ p {
 
 /* === Our Team === */
 #our-team {
-  padding: 4.6rem;
+  padding: 4rem;
+  background: #f4f6f9;
 }
 /* Header Section  */
 #our-team .header-sec {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 #our-team .header-sec span.sub-title {
   letter-spacing: 0.04em;
@@ -844,13 +879,13 @@ p {
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  -o-transition: all 0.5s;
+  /* -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  backface-visibility: hidden; */
 }
 .our_services .our_service_inner:hover {
   background: linear-gradient(
@@ -887,12 +922,12 @@ p {
 .our_services .our_service_inner .icon-area img.icon-front {
   z-index: 2;
   position: absolute;
+  backface-visibility: hidden;
 }
 .our_services .our_service_inner .icon-area img.icon-back {
   position: absolute;
   z-index: 1;
-  -webkit-transform: rotateY(0.5turn);
-  transform: rotateY(0.5turn);
+  transform: rotateY(180deg);
 }
 .our_services .our_service_inner:hover .icon-area img.icon-front {
   z-index: 1;
@@ -907,6 +942,9 @@ p {
   -ms-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
+}
+.our_services .our_service_inner:hover .icon-area {
+  transform: rotateY(180deg);
 }
 
 .our_service_inner .inner-text {
@@ -1291,6 +1329,8 @@ p {
 }
 #appointment::before {
   top: 0;
+  background: #f4f6f9;
+  z-index: -1;
 }
 #appointment::after {
   top: 50%;
@@ -1388,6 +1428,72 @@ p {
   border: 1px solid var(--primary-color);
   background-color: #000;
   color: #fff;
+}
+
+/* === Breadcrumb === */
+#breadcrumb {
+  background: var(--grey-color);
+  color: #000;
+  padding: 130px 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-image: url(../images/breadcrumb-image-1.jpg);
+  margin-bottom: 0px;
+}
+#breadcrumb h1.breadcrumb-title {
+  font-size: 3.7rem;
+  font-family: var(--title-fonts);
+  font-weight: 600;
+  color: #18100f;
+  letter-spacing: 0.2px;
+}
+.breadcrumb {
+  margin-left: 12px;
+  margin-top: 4px;
+}
+.breadcrumb .breadcrumb-item {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--body-fonts);
+  color: var(--secondary-color);
+  letter-spacing: 0.2px;
+}
+.breadcrumb .breadcrumb-item a {
+  color: #666666;
+}
+.breadcrumb li i {
+  font-size: 0.8rem;
+}
+.breadcrumb li.active {
+  color: var(--primary-color);
+}
+
+/* === Page Sectin === */
+#appointment-page-form {
+  padding: 4.6rem 0;
+}
+.appointment-page-form {
+  background: #f4f6f9;
+  padding: 35px;
+}
+.appointment-page-form label {
+  color: #000 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.appointment-page-form input,
+.appointment-page-form select,
+.appointment-page-form textarea {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  padding: 12px;
 }
 /* === Footer === */
 footer {

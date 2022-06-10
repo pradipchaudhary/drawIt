@@ -82,8 +82,7 @@ $(document).ready(function () {
     },
   });
   // back to top
-  
-$(document).ready(function () {
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $("#scroll").fadeIn();
@@ -92,10 +91,9 @@ $(document).ready(function () {
     }
   });
   $("#scroll").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html, body").animate({ scrollTop: 0 }, 0);
     return false;
   });
-});
 });
 
 document.addEventListener("DOMContentLoaded", function () {
