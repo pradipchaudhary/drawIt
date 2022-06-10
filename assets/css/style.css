@@ -951,6 +951,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.8;
 }
 #portfolio .header-sec {
   text-align: center;
@@ -1000,6 +1001,16 @@ p {
   overflow: hidden;
   z-index: 2;
   margin: 10px;
+  transition: all 0.6s ease;
+}
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-color: var(--primary-color);
 }
 .project img {
   width: 100%;
@@ -1007,25 +1018,170 @@ p {
   object-fit: cover;
   object-position: center;
   border-radius: 4px;
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  filter: grayscale(0%);
+  overflow: hidden;
+}
+.project a.plush {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--grey-color);
+  background-color: var(--primary-color);
+  transition: all 0.6s ease;
+  visibility: hidden;
+  border-radius: 2px;
+}
+/* Hover */
+.project:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+.project a.plush:hover {
+  background-color: #000;
+}
+.project:hover .content {
+  bottom: 25px;
+}
+.project:hover a.plush {
+  visibility: visible;
 }
 
+/* Content  */
 .project .content {
   position: absolute;
-  top: 100%;
+  bottom: -400px;
   background-color: var(--white-color);
   width: 90%;
   left: 5%;
   border-radius: 5px;
   padding: 30px 15px;
+  transition: all 0.6s ease;
+}
+
+.project .content a {
+  color: #000;
+  transition: all 0.6s ease;
+}
+.project .content a:hover {
+  color: var(--primary-color);
 }
 .project .content h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 .project .content h6 {
   color: var(--primary-color);
   margin-top: 10px;
+  font-size: 0.9rem;
 }
+/* === Our Step === */
+#our-step {
+  padding-bottom: 4.6rem;
+  background: url(../images/bg-step.png) no-repeat center 25%;
+  position: relative;
+  /* z-index: 100; */
+}
+#our-step::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+}
+#our-step .header-sec {
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+#our-step .header-sec span.sub-title {
+  letter-spacing: 0.04em;
+  font-family: var(--title-fonts);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background: #d3e9fb;
+  padding: 4px 8px;
+  margin: 0 0 10px;
+}
+#our-step .header-sec h5.title {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 56px;
+  z-index: 9;
+  color: var(--dark-color);
+  padding: 0;
+  margin: 0 0;
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: var(--title-fonts);
+}
+/* === Step === */
+#our-step .our-step {
+  margin-top: 4.6rem;
+}
+#our-step .step {
+  padding: 15px;
+  position: relative;
+}
+#our-step .step img {
+  width: 100%;
+  max-width: 200px;
+}
+#our-step .step-no {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  background: var(--primary-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+#our-step .step h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: var(--title-fonts);
+}
+#our-step .step p {
+  color: var(--secondary-color);
+  padding-right: 18px;
+  padding-top: 4px;
+}
+#our-step .our-step .get-appointment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+#our-step .our-step .get-appointment i {
+  margin-left: 6px;
+}
+/* #our-step .our-step {
+  background: url(../images/bg-step.png) no-repeat center center;
+  background-size: contain;
+} */
+
 /* === Testimonial ===*/
 #testimonial {
   padding: 4.6rem 0px;
@@ -1061,6 +1217,7 @@ p {
   display: block;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-family: var(--title-fonts);
 }
 
 #testimonial .reviews_item {
@@ -1121,7 +1278,22 @@ p {
 #appointment {
   position: relative;
   padding: 4.6rem 0;
-  /* background: url(../images/bg-img.png); */
+  z-index: 9;
+}
+#appointment::before,
+#appointment::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+#appointment::before {
+  top: 0;
+}
+#appointment::after {
+  top: 50%;
+  background-color: #fff;
+  z-index: -1;
 }
 #appointment .appointment-box {
   background-color: #fff;
@@ -1139,6 +1311,7 @@ p {
   top: 0;
   display: block;
 }
+
 #appointment .appointment-box img {
   position: absolute;
   left: -10px;
@@ -1284,15 +1457,6 @@ footer .copyright p {
   color: #a9a9a9;
 }
 
-/* === Button to Top === */
-.to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  opacity: 1;
-  transition: opacity 0.8s ease-in;
-}
-
 .to-top--hidden {
   opacity: 0;
 }
@@ -1369,13 +1533,31 @@ footer .copyright p {
   #about-us .about-detail {
     margin-top: 10px;
   }
+  /* About Two */
+  #about_two::after {
+    content: "";
+    background: transparent;
+  }
+  #about_two img {
+    margin: 10px 0;
+  }
+  #about_two .milestone .milestone_item h2 {
+    color: #000;
+  }
+  #about_two .milestone .milestone_item h5 {
+    color: var(--secondary-color);
+  }
   /* Facilities */
   #facilities {
     padding: 0px;
   }
   /* Our services */
-  #our-services .our_services .our_service_item {
-    border: none;
+  #our-services {
+    padding: 0;
+  }
+
+  #our-step {
+    background: #fff;
   }
   /* our team  */
   #our-team {
@@ -1392,13 +1574,19 @@ footer .copyright p {
     padding: 0px;
   }
   #appointment {
-    padding: 15px 0;
+    /* padding: 35px 0; */
   }
   #appointment .appointment-box {
     padding: 0;
     padding-right: 15px;
     background-color: var(--primary-color);
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
+  #appointment .appointment-box .girl-img {
+    display: none;
+  }
+
   #appointment .appointment-form {
     padding: 0px;
     margin: 0px;

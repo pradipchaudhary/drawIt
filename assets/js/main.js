@@ -51,9 +51,11 @@ $(document).ready(function () {
       0: {
         items: 1,
       },
-      768: {
-        items: 4,
-        margin: 10,
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 3,
       },
     },
   });
@@ -64,16 +66,18 @@ $(document).ready(function () {
     dots: true,
     smartSpeed: 900,
     items: 1,
-    margin: 24,
+    margin: 40,
     autoplay: false,
     autoplayTimeout: 4000,
     responsive: {
       0: {
         items: 1,
       },
-      768: {
+      600: {
+        items: 1,
+      },
+      1000: {
         items: 2,
-        margin: 40,
       },
     },
   });
