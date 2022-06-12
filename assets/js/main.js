@@ -96,6 +96,37 @@ $(document).ready(function () {
   });
 });
 
+// === Loader ===
+// === Pop Up on Load ===
+// $(document).ready(function () {
+//   setTimeout(function () {
+//     $("#dialog").fadeIn();
+//   }, 500);
+// });
+
+// function Close() {
+//   $("#dialog").fadeOut();
+// }
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+window.onload = function () {
+  toggleModal();
+};
+
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+// === header Fix on scroll
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     if (window.scrollY > 200) {
@@ -112,9 +143,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // DOMContentLoaded  end
 
-countDown();
+// countDown();
 
-setInterval(countDown, 1000);
+// setInterval(countDown, 1000);
 
 // Scroll Back To Top
 // function scrollTopBack() {
@@ -139,15 +170,15 @@ navBar.forEach(function (a) {
   });
 });
 
-const $toTop = document.querySelector(".to-top");
+// const $toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll", function () {
-  const { pageYOffset } = window,
-    hidden = $toTop.classList.contains("to-top--hidden");
+// window.addEventListener("scroll", function () {
+//   const { pageYOffset } = window,
+//     hidden = $toTop.classList.contains("to-top--hidden");
 
-  if (hidden && pageYOffset > 200) {
-    $toTop.classList.remove("to-top--hidden");
-  } else if (!hidden && pageYOffset <= 200) {
-    $toTop.classList.add("to-top--hidden");
-  }
-});
+//   if (hidden && pageYOffset > 200) {
+//     $toTop.classList.remove("to-top--hidden");
+//   } else if (!hidden && pageYOffset <= 200) {
+//     $toTop.classList.add("to-top--hidden");
+//   }
+// });
