@@ -141,11 +141,44 @@
             <li class="nav-item">
               <a class="nav-link">Contact Us</a>
             </li>
-            <li class="nav-item">
+            <div class="nav-item dropdown search-dropdown">
+              <a
+                data-toggle="dropdown"
+                class="nav-item nav-link dropdown-toggle"
+                href="#"
+                ><i class="fa fa-search"></i
+              ></a>
+              <a
+                data-toggle="dropdown"
+                class="nav-item nav-link dropdown-menu-toggle d-none"
+                href="#"
+                ><i class="fa fa-close"></i
+              ></a>
+              <div class="dropdown-menu">
+                <div>
+                  <form>
+                    <div class="input-group search-box">
+                      <input
+                        type="text"
+                        id="search"
+                        class="form-control"
+                        placeholder="Search here..."
+                      />
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-primary">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- <li class="nav-item">
               <div class="search_box">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
-            </li>
+            </li> -->
             <li class="nav-item">
               <button class="btn btn-default" type="submit">
                 <a href="appointment.html"> Appointments </a

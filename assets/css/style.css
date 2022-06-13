@@ -256,7 +256,47 @@ p {
 #header .navbar-toggler:focus {
   box-shadow: none;
 }
+/* === Search Box === */
+.navbar .search-dropdown .dropdown-menu {
+  width: 400px;
+  padding: 20px;
+  left: auto;
+  right: 0;
+  font-size: 14px;
+}
 
+.search-box {
+  width: 100%;
+  position: relative;
+}
+.search-box input {
+  border-color: #dfe3e8;
+  box-shadow: none;
+}
+.search-box input,
+.search-box .btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.input-group-append .btn,
+.input-group-append .btn:active {
+  border-color: var(--primary-dark-color);
+  background: var(--primary-dark-color) !important;
+}
+.navbar .nav-item i {
+  font-size: 18px;
+  line-height: 16px;
+}
+.navbar .search-dropdown .dropdown-toggle::after {
+  display: none;
+}
+.search-box input:hover,
+.search-box .btn:hover,
+.search-box .btn:focus,
+.search-box input:focus {
+  box-shadow: none;
+  outline: none;
+}
 /* Dropdown */
 #header .dropdown-menu {
   border: none;

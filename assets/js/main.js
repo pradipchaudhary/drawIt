@@ -96,17 +96,22 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  var dropdown = $(".search-dropdown");
+  var toogleBtn = $(".search-dropdown .dropdown-toggle");
+
+  // Toggle search and close icon for search dropdown
+  dropdown.on("show.bs.dropdown", function (e) {
+    toogleBtn.toggleClass("d-none");
+  });
+  dropdown.on("hide.bs.dropdown", function (e) {
+    toogleBtn.addClass("d-none");
+    toogleBtn.first().removeClass("d-none");
+  });
+});
+
 // === Loader ===
 // === Pop Up on Load ===
-// $(document).ready(function () {
-//   setTimeout(function () {
-//     $("#dialog").fadeIn();
-//   }, 500);
-// });
-
-// function Close() {
-//   $("#dialog").fadeOut();
-// }
 
 // === header Fix on scroll
 document.addEventListener("DOMContentLoaded", function () {
@@ -151,16 +156,3 @@ navBar.forEach(function (a) {
     navCollapse.classList.remove("show");
   });
 });
-
-// const $toTop = document.querySelector(".to-top");
-
-// window.addEventListener("scroll", function () {
-//   const { pageYOffset } = window,
-//     hidden = $toTop.classList.contains("to-top--hidden");
-
-//   if (hidden && pageYOffset > 200) {
-//     $toTop.classList.remove("to-top--hidden");
-//   } else if (!hidden && pageYOffset <= 200) {
-//     $toTop.classList.add("to-top--hidden");
-//   }
-// });
