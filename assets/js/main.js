@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  // Pre Loading ...
+  setTimeout(function () {
+    $("body").addClass("loaded");
+  }, 1000);
+
   //Owl
   $(".hero-slider").owlCarousel({
     loop: true,
@@ -95,23 +100,26 @@ $(document).ready(function () {
     return false;
   });
 });
-
 $(document).ready(function () {
   var dropdown = $(".search-dropdown");
   var toogleBtn = $(".search-dropdown .dropdown-toggle");
+  var searchBox = $(".search-dropdown .dropdown-menu");
 
+  console.log(dropdown);
   // Toggle search and close icon for search dropdown
-  dropdown.on("show.bs.dropdown", function (e) {
+  $("#open").click(function (e) {
+    console.log(1);
     toogleBtn.toggleClass("d-none");
+    searchBox.addClass("show");
   });
-  dropdown.on("hide.bs.dropdown", function (e) {
+
+  $("#close").click(function (e) {
+    console.log(2);
     toogleBtn.addClass("d-none");
     toogleBtn.first().removeClass("d-none");
+    searchBox.removeClass("show");
   });
 });
-
-// === Loader ===
-// === Pop Up on Load ===
 
 // === header Fix on scroll
 document.addEventListener("DOMContentLoaded", function () {
@@ -149,10 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // scrollTopBack();
 
 // nav hide
-let navBar = document.querySelectorAll(".nav-link");
-let navCollapse = document.querySelector(".navbar-collapse.collapse");
-navBar.forEach(function (a) {
-  a.addEventListener("click", function () {
-    navCollapse.classList.remove("show");
-  });
-});
+// let navBar = document.querySelectorAll(".nav-link");
+// let navCollapse = document.querySelector(".navbar-collapse.collapse");
+// navBar.forEach(function (a) {
+//   a.addEventListener("click", function () {
+//     navCollapse.classList.remove("show");
+//   });
+// });

@@ -26,26 +26,13 @@
     <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
   </head>
   <body>
-    <!-- Loader -->
+    <!--Pre Loader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
     <!-- Popup On Load -->
-    <div id="dialog" style="display: none">
-      <div>
-        <div class="dialog-content">
-          <span class="dialog-close" onclick="Close()">
-            <i class="fa-solid fa-xmark"></i>
-          </span>
-          <div class="dialog-inner-content">
-            <div class="" style="width: 200px; height: 200px"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal">
-      <div class="modal-content">
-        <span class="close-button">×</span>
-        <h1>Hello, I am a modal!</h1>
-      </div>
-    </div>
 
     <!-- Top Wrap -->
     <div id="top_wrap">
@@ -93,7 +80,7 @@
     <!-- Header -->
     <nav id="header" class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/images/neuro-logo.png" alt="" class="img-fluid" />
         </a>
         <button
@@ -131,11 +118,10 @@
                 Services
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Neurology</a></li>
+                <li><a class="dropdown-item" href="#">Neurosurgery</a></li>
+                <li><a class="dropdown-item" href="#">Cardiology</a></li>
+                <li><a class="dropdown-item" href="#">Orhopedic </a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -146,12 +132,14 @@
                 data-toggle="dropdown"
                 class="nav-item nav-link dropdown-toggle"
                 href="#"
+                id="open"
                 ><i class="fa fa-search"></i
               ></a>
               <a
                 data-toggle="dropdown"
-                class="nav-item nav-link dropdown-menu-toggle d-none"
+                class="nav-item nav-link dropdown-toggle d-none"
                 href="#"
+                id="close"
                 ><i class="fa fa-close"></i
               ></a>
               <div class="dropdown-menu">
@@ -794,12 +782,12 @@
                 </div>
                 <img src="assets/images/d1.jpg" alt="" />
                 <div class="inner-text">
-                  <h4 class="name">Dr. Birendra Kumar Bista</h4>
-                  <h5>Neurologist</h5>
+                  <h4 class="name">Dr. Zubin Silwal</h4>
+                  <h5>Urologist</h5>
+                  <span class="nmc-no">NMC No. : 4291 </span>
                 </div>
               </div>
             </div>
-
             <!-- Doctor item -->
             <div class="item">
               <div class="inner-item">
@@ -818,8 +806,9 @@
                 </div>
                 <img src="assets/images/d2.jpg" alt="" />
                 <div class="inner-text">
-                  <h4 class="name">Dr. Yam Bahadur Roka</h4>
-                  <h5>Neurosurgeon</h5>
+                  <h4 class="name">Dr. Keshar Bahadur Gurung</h4>
+                  <h5>Physician</h5>
+                  <span class="nmc-no">NMC No. : 7436 </span>
                 </div>
               </div>
             </div>
@@ -841,8 +830,9 @@
                 </div>
                 <img src="assets/images/d3.jpg" alt="" />
                 <div class="inner-text">
-                  <h4 class="name">Dr. Nikesh Raj Shrestha</h4>
-                  <h5>Cardiologist</h5>
+                  <h4 class="name">Dr. Manzil Shrestha</h4>
+                  <h5>Anesthesiologist</h5>
+                  <span class="nmc-no">NMC No. : 4604 </span>
                 </div>
               </div>
             </div>
@@ -864,31 +854,9 @@
                 </div>
                 <img src="assets/images/d4.jpg" alt="" />
                 <div class="inner-text">
-                  <h4 class="name">Prof. Dr. Navin Kumar Karna</h4>
-                  <h5>Orthopaedic Surgeon</h5>
-                </div>
-              </div>
-            </div>
-            <!-- Doctor item -->
-            <div class="item">
-              <div class="inner-item">
-                <div class="social_media">
-                  <ul>
-                    <li>
-                      <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
-                    </li>
-                    <li>
-                      <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
-                    </li>
-                  </ul>
-                </div>
-                <img src="assets/images/d1.jpg" alt="" />
-                <div class="inner-text">
-                  <h4 class="name">Prof. Dr. Shailaja Chhetri (Shrestha)</h4>
-                  <h5>Gynaecologist</h5>
+                  <h4 class="name">Dr. Mohan Karki</h4>
+                  <h5>Neuro Surgeon</h5>
+                  <span class="nmc-no">NMC No. : 11223 </span>
                 </div>
               </div>
             </div>
