@@ -52,6 +52,12 @@ body {
 img {
   max-width: 100%;
 }
+h1,
+h2 {
+  font-weight: 600;
+  font-family: var(--title-fonts);
+  font-size: 3rem;
+}
 a,
 a:hover {
   text-decoration: none;
@@ -300,7 +306,7 @@ p {
   align-items: center;
 }
 
-#header .nav-item button {
+#header .nav-item .btn-default {
   transition: 0.5s all;
   position: relative;
   width: auto;
@@ -321,10 +327,10 @@ p {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-#header .nav-item button a {
+#header .nav-item .btn a {
   color: #fff;
 }
-#header .nav-item button:hover {
+#header .nav-item .btn:hover {
   background: #000;
   color: #fff;
   border: none;
@@ -389,6 +395,7 @@ p {
 #header .search-box {
   width: 100%;
   position: relative;
+  padding: 8px;
 }
 #header .navbar .navbar-nav.show > a,
 #header .navbar .navbar-nav > a.active {
@@ -398,11 +405,15 @@ p {
 #header .search-box input {
   border-color: #dfe3e8;
   box-shadow: none;
+  padding: 10px;
 }
 #header .search-box input,
 #header .search-box .btn {
-  min-height: 38px;
+  min-height: 48px;
   border-radius: 2px;
+}
+#header .search-box .btn {
+  padding: 0px 20px;
 }
 .input-group-append .btn,
 .input-group-append .btn:active {
