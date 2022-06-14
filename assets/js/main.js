@@ -50,7 +50,7 @@ $(document).ready(function () {
     dots: false,
     smartSpeed: 600,
     center: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 6000,
     responsive: {
       0: {

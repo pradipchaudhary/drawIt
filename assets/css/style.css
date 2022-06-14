@@ -1381,8 +1381,9 @@ ul li {
   position: relative;
   overflow: hidden;
   z-index: 2;
-  margin: 10px;
+  margin: 20px;
   transition: all 0.6s ease;
+  box-shadow: rgb(0 33 85 / 16%) 0px 5px 15px 0px;
 }
 .project .overlay {
   position: absolute;
@@ -1403,6 +1404,7 @@ ul li {
   transition: transform 0.5s, filter 1.5s ease-in-out;
   filter: grayscale(0%);
   overflow: hidden;
+  box-shadow: var(--shadow);
   filter: blur(1px);
   -webkit-filter: blur(1px);
 }
@@ -1935,6 +1937,85 @@ ul li {
 #page .page-sidebar ul.service-menu li a.active {
   color: var(--white-color);
   background: var(--primary-color);
+}
+
+/* ==============================
+    Doctor Page 
+    ============================= */
+.doctor-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 30px 0 rgb(0 20 9 / 10%);
+  -moz-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
+  box-shadow: 0px 0px 30px 0 rgb(0 20 9 / 10%);
+  transition: all 0.35s ease-in-out;
+}
+/* Hover */
+.doctor-item:hover .social_link {
+  top: 0;
+  opacity: 1;
+  z-index: 2;
+}
+.doctor-item:hover .inner-text::before {
+  background: var(--primary-color);
+  top: 0;
+  left: 0;
+  opacity: 1;
+  height: 100%;
+}
+.doctor-item:hover .inner-text h4,
+.doctor-item:hover .inner-text h5,
+.doctor-item:hover .inner-text span.nmc-no {
+  color: #fff;
+}
+.doctor-item .social_link {
+  position: absolute;
+  top: -60px;
+  right: 30px;
+  background: var(--primary-color);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.35s ease-in-out;
+}
+.doctor-item .social_link li a {
+  padding: 16px;
+  display: flex;
+  color: var(--white-color);
+  align-items: center;
+  transition: all 0.6s ease;
+}
+.doctor-item .social_link li a:hover {
+  background: var(--dark-color);
+}
+.doctor-item .inner-text {
+  padding: 18px;
+  position: relative;
+}
+.doctor-item .inner-text:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.doctor-item .inner-text h4 {
+  font-size: 1.2rem;
+}
+.doctor-item .inner-text h5 {
+  font-size: 0.96rem;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+.doctor-item .inner-text span.nmc-no {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-family: var(--body-fonts);
 }
 /* ===========================================
       Footer Section  
