@@ -1888,6 +1888,18 @@ ul li {
 #contact-us-sec a:hover {
   background: #000;
 }
+
+/* ====================================================
+    Page 
+====================================================== */
+.about-phone {
+  font-family: var(--title-fonts);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+#page p {
+  font-family: var(--body-fonts);
+}
 /* ====================================================
     Single Page for Services
 ====================================================== */
