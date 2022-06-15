@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -122,17 +122,31 @@ ul li {
   height: 100%;
   z-index: 1000;
 }
+.pre-loader-img {
+  position: absolute;
+  top: 54%;
+  left: 51%;
+  z-index: 9999;
+  width: 120px;
+  transform: translate(-44%, -50%);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 15px 0px rgb(0 33 85 / 10%);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
+  box-shadow: 0px 5px 15px 0px rgb(0 33 85 / 10%);
+}
 #loader {
   display: block;
   position: relative;
   left: 50%;
   top: 50%;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #3498db;
+  border-top-color: #ffffff;
+  transform: translate(-50%, -50%);
   -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   z-index: 1001;
@@ -195,7 +209,8 @@ ul li {
   width: 51%;
   height: 100%;
   z-index: 1000;
-  background: var(--primary-dark-color);
+  background: var(--primary-color);
+  /* background: var(--primary-dark-color); */
   -webkit-transform: translateX(0); /* Chrome, Opera 15+, Safari 3.1+ */
   -ms-transform: translateX(0); /* IE 9 */
   transform: translateX(0); /* Firefox 16+, IE 10+, Opera */
@@ -553,6 +568,13 @@ ul li {
   background-position: right;
   background-repeat: no-repeat;
 }
+/* .slide3 {
+  background: linear-gradient(to right, rgba(255 255 255), rgba(0, 0, 0, 0)),
+    url(../images/slider/slider3.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+} */
 .slide .display-3 {
   text-transform: uppercase;
   color: #fff;
@@ -1108,6 +1130,9 @@ ul li {
   -moz-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
   box-shadow: 0px 0px 30px 0 rgb(0 20 9 / 10%);
 }
+#our-team .item .inner-item .inner-text a {
+  color: var(--dark-color);
+}
 #our-team .item .inner-item .inner-text h4 {
   font-size: 1.2rem;
   font-family: var(--title-fonts);
@@ -1134,6 +1159,9 @@ ul li {
   -o-transform: translate(-60px);
   -ms-transform: translate(-60px);
   transform: translateY(-60px);
+}
+#our-team .item .inner-item .inner-text a:hover {
+  color: var(--primary-color);
 }
 /* owl control */
 #our-team .owl-nav {
@@ -1899,8 +1927,8 @@ ul li {
     Single Page for Services
 ====================================================== */
 #page {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 #page .page-sidebar {
@@ -1965,13 +1993,11 @@ ul li {
   opacity: 1;
   z-index: 2;
 }
-.doctor-item:hover .inner-text::before {
+.doctor-item:hover {
+  cursor: pointer;
   background: var(--primary-color);
-  top: 0;
-  left: 0;
-  opacity: 1;
-  height: 100%;
 }
+
 .doctor-item:hover .inner-text h4,
 .doctor-item:hover .inner-text h5,
 .doctor-item:hover .inner-text span.nmc-no {
@@ -2023,6 +2049,141 @@ ul li {
   font-size: 0.85rem;
   color: var(--secondary-color);
   font-family: var(--body-fonts);
+}
+/* ===========================================
+      Single Doctor
+  ============================================ */
+.single-doctor .info {
+  display: flex;
+  align-items: center;
+}
+.single-doctor-info {
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.single-doctor span.sub-title {
+  letter-spacing: 0.04em;
+  font-family: var(--title-fonts);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background: #d3e9fb;
+  padding: 4px 8px;
+  margin: 0 0 10px;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.single-doctor h5.title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 56px;
+  z-index: 9;
+  color: var(--dark-color);
+  padding: 0;
+  margin: 0 0;
+  position: relative;
+  display: block;
+}
+/* basic info */
+.single-doctor .basic-info {
+  margin-top: 30px;
+  color: var(--dark-color);
+}
+.basic-info .basic-info-item {
+  display: flex;
+  padding: 5px 0;
+}
+.basic-info .basic-info-item .icon {
+  margin-right: 15px;
+  color: #1d1d1d;
+}
+.basic-info .basic-info-item .icon i {
+  font-size: 20px;
+}
+.single-doctor .basic-info .basic-info-item h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Jost", Sans-serif;
+  color: #616161;
+}
+.single-doctor .follow-us {
+  margin-top: 30px;
+}
+.single-doctor .follow-us h5 {
+  font-size: 1.6rem;
+  font-family: var(--title-fonts);
+  font-weight: 500;
+}
+.single-doctor .follow-us ul {
+  display: flex;
+  margin-top: 10px;
+}
+.single-doctor .follow-us ul a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color: #000;
+  transition: all 0.6s ease;
+}
+.single-doctor .follow-us ul a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+/* single doctor appointment  */
+.single-doctor-appointment form input {
+  width: 47%;
+  background: var(--grey-color);
+  color: var(----dark-color);
+  border: 1px solid var(--grey-color);
+  border-radius: 3px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 15px;
+  height: 54px;
+  line-height: 54px;
+  outline: none;
+  /* margin-right: 30px; */
+}
+.single-doctor-appointment form textarea {
+  width: 100%;
+  height: 160px;
+  background: var(--grey-color);
+  color: var(----dark-color);
+  border: 1px solid var(--grey-color);
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 15px;
+}
+.single-doctor-appointment form input:nth-child(1),
+.single-doctor-appointment form input:nth-child(3) {
+  margin-right: 30px;
+}
+
+.single-doctor-appointment form input:focus,
+.single-doctor-appointment form textarea:focus {
+  border: 1px solid var(--primary-color);
+  outline: none;
+  box-shadow: none;
+}
+.single-doctor-appointment form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 /* ===========================================
       Footer Section  

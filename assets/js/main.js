@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Pre Loading ...
-  setTimeout(function () {
-    $("body").addClass("loaded");
-  }, 1000);
+  // setTimeout(function () {
+  //   $("body").addClass("loaded");
+  // }, 1000);
 
   //Owl
   $(".hero-slider").owlCarousel({
@@ -136,31 +136,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-// DOMContentLoaded  end
 
-// countDown();
-
-// setInterval(countDown, 1000);
-
-// Scroll Back To Top
-// function scrollTopBack() {
-//   let scrollTopButton = document.querySelector("#scrollUp");
-//   window.onscroll = function () {
-//     var scroll = document.documentElement.scrollTop;
-//     if (scroll >= 250) {
-//       scrollTopButton.classList.add("scrollActive");
-//     } else {
-//       scrollTopButton.classList.remove("scrollActive");
-//     }
-//   };
-// }
-// scrollTopBack();
-
-// nav hide
-// let navBar = document.querySelectorAll(".nav-link");
-// let navCollapse = document.querySelector(".navbar-collapse.collapse");
-// navBar.forEach(function (a) {
-//   a.addEventListener("click", function () {
-//     navCollapse.classList.remove("show");
-//   });
+// === Counter
+// counter design
+// document.addEventListener("DOMContentLoaded", () => {
+//   function counter(id, start, end, duration) {
+//     let obj = document.getElementById(id),
+//       current = start,
+//       range = end - start,
+//       increment = end > start ? 1 : -1,
+//       step = Math.abs(Math.floor(duration / range)),
+//       timer = setInterval(() => {
+//         current += increment;
+//         obj.textContent = current;
+//         if (current == end) {
+//           clearInterval(timer);
+//         }
+//       }, step);
+//   }
+//   counter("count1", 0, 1287, 3000);
+//   counter("count2", 0, 500, 2500);
+//   counter("count3", 0, 30, 3000);
 // });
