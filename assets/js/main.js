@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Pre Loading ...
-  // setTimeout(function () {
-  //   $("body").addClass("loaded");
-  // }, 1000);
+  setTimeout(function () {
+    $("body").addClass("loaded");
+  }, 1000);
 
   //Owl
   $(".hero-slider").owlCarousel({
@@ -27,7 +27,7 @@ $(document).ready(function () {
   });
   $(".our-team").owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 20,
     nav: true,
     dots: false,
     responsive: {

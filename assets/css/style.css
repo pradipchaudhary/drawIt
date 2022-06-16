@@ -122,26 +122,14 @@ ul li {
   height: 100%;
   z-index: 1000;
 }
-.pre-loader-img {
-  position: absolute;
-  top: 54%;
-  left: 51%;
-  z-index: 9999;
-  width: 120px;
-  transform: translate(-44%, -50%);
-  border: 1px solid var(--primary-color);
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 5px 15px 0px rgb(0 33 85 / 10%);
-  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
-  box-shadow: 0px 5px 15px 0px rgb(0 33 85 / 10%);
-}
+
 #loader {
   display: block;
   position: relative;
   left: 50%;
   top: 50%;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
@@ -1071,10 +1059,11 @@ ul li {
   transition: all 0.35s ease;
   overflow: hidden;
   position: relative;
+  margin: 8px;
 }
 #our-team .item .inner-item .social_media {
   position: absolute;
-  top: -155px;
+  top: -175px;
   right: 25px;
   background-color: var(--primary-color);
   transition: all 0.35s ease-in-out;
@@ -1103,8 +1092,8 @@ ul li {
 #our-team .item .inner-item img {
   width: 100%;
   height: 100%;
-  max-height: 472px;
-  min-height: 472px;
+  max-height: 600px;
+  min-height: 480px;
   object-fit: contain;
   object-position: 50% center;
 }
@@ -1114,12 +1103,12 @@ ul li {
   padding: 25px 10px;
   position: relative;
   border-radius: 5px;
-  transform: translateY(-30px);
-  -moz-transform: translate(-30px);
-  -webkit-transform: translate(-30px);
-  -o-transform: translate(-30px);
-  -ms-transform: translate(-30px);
-  transform: translateY(-30px);
+  transform: translateY(-40px);
+  -moz-transform: translate(-40px);
+  -webkit-transform: translate(-40px);
+  -o-transform: translate(-40px);
+  -ms-transform: translate(-40px);
+  transform: translateY(-40px);
   transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -1153,12 +1142,12 @@ ul li {
 }
 /* Hover */
 #our-team .item .inner-item:hover .inner-text {
-  transform: translateY(-60px);
-  -moz-transform: translate(-60px);
-  -webkit-transform: translate(-60px);
-  -o-transform: translate(-60px);
-  -ms-transform: translate(-60px);
-  transform: translateY(-60px);
+  transform: translateY(-70px);
+  -moz-transform: translate(-70px);
+  -webkit-transform: translate(-70px);
+  -o-transform: translate(-70px);
+  -ms-transform: translate(-70px);
+  transform: translateY(-70px);
 }
 #our-team .item .inner-item .inner-text a:hover {
   color: var(--primary-color);
@@ -1489,7 +1478,9 @@ ul li {
   margin-top: 10px;
   font-size: 0.9rem;
 }
-/* === Our Step === */
+/* =========================================================
+     Our Step 
+  ========================================================== */
 #our-step {
   padding-bottom: 4.6rem;
   background: url(../images/bg-step.png) no-repeat center 25%;
@@ -1587,12 +1578,9 @@ ul li {
 #our-step .our-step .get-appointment i {
   margin-left: 6px;
 }
-/* #our-step .our-step {
-  background: url(../images/bg-step.png) no-repeat center center;
-  background-size: contain;
-} */
 
-/* === Testimonial ===*/
+/* ================================================================                Testimonial 
+===================================================================*/
 #testimonial {
   padding-bottom: 3rem;
   background-color: var(--white-color);
@@ -1629,7 +1617,6 @@ ul li {
   margin-bottom: 20px;
   font-family: var(--title-fonts);
 }
-
 #testimonial .reviews_item {
   background-color: #f4f6f9;
   padding: 45px;
@@ -1641,7 +1628,6 @@ ul li {
   color: var(--secondary-color);
   line-height: 2.2rem;
 }
-
 #testimonial .reviews_item .review_profile {
   display: flex;
   margin-top: 40px;
@@ -1674,17 +1660,16 @@ ul li {
 #testimonial .reviews_item .icon i {
   font-size: 60px;
 }
-
 #testimonial .owl-dots button.owl-dot span {
   width: 30px;
   height: 3px;
-  /* display: none; */
 }
 #testimonial .owl-dots button.active span {
   background-color: var(--primary-color);
 }
-
-/* === Appointment  */
+/* =========================================================
+    Appointment 
+  ========================================================== */
 #appointment {
   position: relative;
   padding: 4.6rem 0;
@@ -1723,7 +1708,6 @@ ul li {
   top: 0;
   display: block;
 }
-
 #appointment .appointment-box img {
   position: absolute;
   left: -10px;
@@ -1761,7 +1745,6 @@ ul li {
   margin-bottom: 20px;
   font-family: var(--title-fonts);
 }
-
 #appointment .appointment-form .f1 {
   display: flex;
   margin: 10px 0;
@@ -1785,7 +1768,6 @@ ul li {
   border-color: var(--brand);
   outline: none;
 }
-
 #appointment .appointment-form button {
   margin-left: 15px;
   margin-top: 20px;
@@ -1800,7 +1782,9 @@ ul li {
   color: #fff;
 }
 
-/* === Breadcrumb === */
+/* ===========================================================
+    Breadcrumb 
+  ============================================================ */
 #breadcrumb {
   background: var(--grey-color);
   color: #000;
@@ -1850,9 +1834,10 @@ ul li {
   color: var(--primary-color);
 }
 
-/* === Page Sectin === */
+/* ===========================================================
+    Page Sectin 
+   =========================================================== */
 #appointment-page-form {
-  /* padding: 4.6rem 0; */
   padding-top: 4.6rem;
 }
 .appointment-page-form {
@@ -1882,7 +1867,9 @@ ul li {
   box-shadow: none;
 }
 
-/* === Contact-us section */
+/* ============================================================
+    Contact-us section
+  ============================================================ */
 #contact-us-sec {
   background: var(--primary-dark-color);
   padding: 5.6rem 0;
@@ -1901,7 +1888,6 @@ ul li {
   position: absolute;
   z-index: -1;
 }
-
 #contact-us-sec h1 {
   font-family: var(--title-fonts);
   font-weight: 600;
@@ -1974,9 +1960,9 @@ ul li {
   background: var(--primary-color);
 }
 
-/* ==============================
+/* =========================================================
     Doctor Page 
-    ============================= */
+  ========================================================== */
 .doctor-item {
   width: 100%;
   height: 100%;
@@ -1997,7 +1983,6 @@ ul li {
   cursor: pointer;
   background: var(--primary-color);
 }
-
 .doctor-item:hover .inner-text h4,
 .doctor-item:hover .inner-text h5,
 .doctor-item:hover .inner-text span.nmc-no {
@@ -2142,7 +2127,7 @@ ul li {
   background: var(--primary-color);
   color: var(--white-color);
 }
-/* single doctor appointment  */
+/* Single Doctor appointment  */
 .single-doctor-appointment form input {
   width: 47%;
   background: var(--grey-color);
@@ -2156,7 +2141,6 @@ ul li {
   height: 54px;
   line-height: 54px;
   outline: none;
-  /* margin-right: 30px; */
 }
 .single-doctor-appointment form textarea {
   width: 100%;
@@ -2173,7 +2157,6 @@ ul li {
 .single-doctor-appointment form input:nth-child(3) {
   margin-right: 30px;
 }
-
 .single-doctor-appointment form input:focus,
 .single-doctor-appointment form textarea:focus {
   border: 1px solid var(--primary-color);
@@ -2195,12 +2178,13 @@ footer {
 }
 footer .footer {
   padding: 0 10px;
+  font-family: "Jost", Sans-serif;
 }
 footer .footer p {
   color: #cdcccc;
+  font-family: "Jost", Sans-serif;
 }
 footer .footer img.footer-logo {
-  /* max-width: 250px; */
   width: 90%;
 }
 footer .footer .footer-social {
@@ -2246,6 +2230,7 @@ footer .footer ul li {
 }
 footer .contact-us ul li span {
   margin-left: 10px;
+  font-family: "Jost", Sans-serif;
 }
 
 /*  Quick Link */
@@ -2260,6 +2245,7 @@ footer .contact-us ul li span {
 .quick_link ul li a {
   text-decoration: none;
   color: #cdcccc;
+  font-family: "Jost", Sans-serif;
 }
 .quick_link ul li a i {
   margin-right: 4px;
@@ -2285,6 +2271,7 @@ footer .recent_post .inner_post {
 }
 footer .recent_post .inner_post span.date {
   font-size: 0.8rem;
+  font-family: "Jost", Sans-serif;
 }
 footer .recent_post .inner_post span.date i {
   margin-right: 4px;
