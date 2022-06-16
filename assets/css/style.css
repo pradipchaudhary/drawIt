@@ -355,6 +355,14 @@ ul li {
 #header .navbar-brand img {
   max-width: 350px;
 }
+#header .nav-item a.btn{
+  color: #fff !important;
+  padding: 16px 30px;
+}
+#header .nav-item a.btn i{
+  padding-left: 4px;
+  font-size: .8rem;
+}
 #header .navbar-nav {
   display: flex;
   align-items: center;
