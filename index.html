@@ -8,18 +8,12 @@
 
     <!-- Themify Icons -->
     <link rel="stylesheet" href="assets/css/themify-icons.css" />
-
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-    <!-- Font Awesome 6 CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -30,7 +24,7 @@
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
     </div>
-    <!-- Popup On Load -->
+    
 
     <!-- Top Wrap -->
     <div id="top_wrap">
@@ -49,9 +43,9 @@
             <!-- Top Social link  -->
             <div class="top_social">
               <ul>
-                <li> <a target="_blank" href="https://www.facebook.com/"> <i class="fa-brands fa-facebook-f"></i> </a> </li>
-                <li> <a target="_blank" href="https://www.instagram/"> <i class="fa-brands fa-instagram"></i></a> </li>
-                <li> <a target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                <li> <a href="https://www.facebook.com/"  target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a> </li>
+                <li> <a href="https://www.instagram/"  target="_blank"> <i class="fa-brands fa-instagram"></i></a> </li>
+                <li> <a href="https://www.twitter.com/"  target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
               </ul>
             </div>
           </div>
@@ -91,7 +85,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
             <div class="nav-item dropdown search-dropdown">
               <span data-toggle="dropdown" class="nav-item nav-link dropdown-toggle" id="open" ><i class="fa fa-search"></i></span>
@@ -120,7 +114,7 @@
       </div>
     </nav>
 
-    <!-- SLIDER -->
+    <!-- Slider  -->
     <div class="owl-carousel owl-theme hero-slider">
       <div class="slide slide1">
         <div class="container inner-slide">
@@ -132,7 +126,7 @@
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
               </p>
-              <a href="#" class="mybtn"
+              <a href="about.html" class="mybtn"
                 >Read More <i class="fa-solid fa-plus"></i>
               </a>
             </div>
@@ -149,7 +143,7 @@
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
               </p>
-              <a href="#" class="mybtn"
+              <a href="about.html" class="mybtn"
                 >Read More <i class="fa-solid fa-plus"></i>
               </a>
             </div>
@@ -162,7 +156,7 @@
       <div class="container">
         <div class="row features">
           <div class="col-md-4 mb-2">
-            <div class="service_item animate__animated animate__fadeInUp">
+            <div class="service_item">
               <div class="icon">
                 <img src="assets/images/icon/emergency-call.png" alt="" />
               </div>
@@ -180,9 +174,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-2">
-            <div
-              class="service_item active animate__animated animate__fadeInUp"
-            >
+            <div class="service_item active" >
               <div class="icon">
                 <img src="assets/images/icon/doctor.png" alt="" />
               </div>
@@ -201,7 +193,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-2">
-            <div class="service_item animate__animated animate__fadeInUp">
+            <div class="service_item" >
               <div class="icon">
                 <img src="assets/images/icon/medical-history.png" alt="" />
               </div>
@@ -232,14 +224,14 @@
     <section id="about-us">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right">
             <img
               src="assets/images/about-img-1.jpg"
               alt=""
               class="about-us-img img-fluid wow fadeInLeft"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left">
             <div class="about-detail">
               <span class="sub-title"> WHAT ABOUT US </span>
               <h5 class="title">The Heart And Science Of Medic Test</h5>
@@ -368,7 +360,7 @@
               ></a>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5" data-aos="fade-in">
             <img src="assets/images/about-2.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-md-2">
@@ -390,7 +382,6 @@
         </div>
       </div>
     </section>
-    <!-- MILESTONE -->
 
     <!-- Our Services -->
     <section id="our-services" class="dark-bg">
@@ -426,7 +417,6 @@
                   class="icon"
                   alt=""
                 />
-
                 <div class="inner-text">
                   <h5>Neurology</h5>
 
@@ -909,9 +899,10 @@
               src="assets/images/nurse-removebg-preview.png"
               alt=""
               class="img-fluid"
+              data-aos="fade-right"
             />
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8" data-aos="fade-left">
             <div class="header-sec">
               <span class="sub-title"> Appointment </span>
               <h5 class="title">Apply For Free Medical Checkup</h5>
@@ -1132,12 +1123,18 @@
     <button class="backtotop" id="scroll">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <!-- Jquery  -->
+    <!-- JavaScrip Link  -->
     <script src="assets/js/jquery.min.js"></script>
-    <!-- Bootstrap 5 js -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/aos.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>

@@ -25,6 +25,8 @@ $(document).ready(function () {
       },
     },
   });
+
+  // Our team 
   $(".our-team").owlCarousel({
     loop: true,
     margin: 20,
@@ -43,6 +45,7 @@ $(document).ready(function () {
     },
   });
 
+  // Porject Slider 
   $(".projects-slider").owlCarousel({
     loop: true,
     nav: false,
@@ -65,6 +68,7 @@ $(document).ready(function () {
     },
   });
 
+  //  Reviews Slider 
   $(".reviews-slider").owlCarousel({
     loop: true,
     nav: false,
@@ -86,8 +90,8 @@ $(document).ready(function () {
       },
     },
   });
-  // back to top
 
+  // back to top
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $("#scroll").fadeIn();
@@ -100,12 +104,12 @@ $(document).ready(function () {
     return false;
   });
 });
+
 $(document).ready(function () {
   var dropdown = $(".search-dropdown");
   var toogleBtn = $(".search-dropdown .dropdown-toggle");
   var searchBox = $(".search-dropdown .dropdown-menu");
 
-  console.log(dropdown);
   // Toggle search and close icon for search dropdown
   $("#open").click(function (e) {
     console.log(1);
@@ -120,6 +124,29 @@ $(document).ready(function () {
     searchBox.removeClass("show");
   });
 });
+
+
+$(function() {
+  function count($this){
+      var current = parseInt($this.html(), 10);
+      current = current + 50; /* Where 50 is increment */
+
+  $this.html(++current);
+  if(current > $this.data('count')){
+      $this.html($this.data('count'));
+  } else {    
+      setTimeout(function(){count($this)}, 5);
+  }
+}        
+
+$(".stat-count").each(function() {
+$(this).data('count', parseInt($(this).html(), 10));
+$(this).html('0');
+count($(this));
+});
+
+});
+
 
 // === header Fix on scroll
 document.addEventListener("DOMContentLoaded", function () {
