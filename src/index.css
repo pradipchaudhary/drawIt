@@ -9,6 +9,9 @@ body {
     font-size: 0.875rem;
     line-height: 1.23;
     font-family: sans-serif;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Header */
@@ -18,4 +21,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 40px;
+    height: 300px;
+    border: 1px solid #3a3a3a;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
 }
