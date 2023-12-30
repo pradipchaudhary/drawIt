@@ -1,6 +1,6 @@
 # drawIt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"drawIt" is an immersive online drawing application built with ReactJS, offering a diverse set of tools for creating, editing, and sharing artwork. Explore a dynamic canvas, unleash your creativity, and express yourself through a seamless and intuitive interface. Perfect for artists, designers, and enthusiasts seeking a versatile platform to bring their imagination to life.
 
 Currently, two official plugins are available:
 
