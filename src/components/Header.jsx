@@ -1,4 +1,5 @@
 import React from "react";
+import Toolbar from "./Toolbar";
 
 const Header = () => {
     return (
@@ -6,7 +7,7 @@ const Header = () => {
             <h1 className="brand-name">
                 draw<span>It</span>
             </h1>
-            <div>Canvas</div>
+            <Toolbar />
             <div>Share</div>
         </div>
     );
