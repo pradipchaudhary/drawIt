@@ -1,9 +1,10 @@
-import Header from "./components/Header";
+import Toolbar from "./components/Toolbar";
+
 function App() {
     return (
         <>
-            <div>
-                <Header />
+            <div id="main__container">
+                <Toolbar />
             </div>
         </>
     );
