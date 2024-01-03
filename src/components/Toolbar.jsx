@@ -15,6 +15,15 @@ const Toolbar = () => {
             <div className="icon">
                 <img src={circle} alt="" />
             </div>
+            <div className="icon">
+                <img src={selection} alt="" />
+            </div>
+            <div className="icon">
+                <img src={rectangle} alt="" />
+            </div>
+            <div className="icon">
+                <img src={circle} alt="" />
+            </div>
         </div>
     );
 };
